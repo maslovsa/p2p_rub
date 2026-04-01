@@ -9,7 +9,7 @@ import Outliers from './pages/Outliers';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/p2p_rub">
       <div className="flex min-h-screen">
         <Sidebar />
         <main className="flex-1 p-4 md:p-8 pb-20 md:pb-8 max-w-6xl">

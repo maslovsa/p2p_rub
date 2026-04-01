@@ -19,7 +19,7 @@ export default function Sidebar() {
         </h1>
         <p className="text-xs text-muted mt-1">USDT/RUB Dashboard</p>
       </div>
-      <nav className="flex flex-col gap-1 flex-1">
+      <nav className="flex flex-col gap-1">
         {NAV.map(({ to, label, icon }) => (
           <NavLink
             key={to}
@@ -34,10 +34,25 @@ export default function Sidebar() {
           </NavLink>
         ))}
       </nav>
-      <div className="mt-4 space-y-2">
-        <DbStatus />
-        <div className="text-xs text-muted/50">Data updates every 2 min</div>
+      <div className="mt-4 space-y-3">
+        <a
+          href="https://t.me/p2p_surf_feed"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-lg border border-border bg-card-hover/40 px-3 py-2.5 hover:border-accent/40 transition-colors"
+        >
+          <div className="flex items-center gap-2 text-sm font-medium text-white">
+            <span>✈️</span>
+            P2P Surf Feed
+          </div>
+          <p className="text-xs text-muted mt-0.5 ml-6">Live-лента в Telegram</p>
+        </a>
+        <div className="rounded-lg border border-border bg-card-hover/40 px-3 py-2.5">
+          <DbStatus />
+          <p className="text-xs text-muted/50 mt-1">Data updates every 2 min</p>
+        </div>
       </div>
+      <div className="flex-1" />
     </aside>
   );
 }
